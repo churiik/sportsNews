@@ -1,0 +1,54 @@
+.nav {
+    background-color: var(--color-primary-1);
+    padding: 0 0.5rem;
+    padding-top: 0.5rem;
+
+    &-list {
+        &__item {
+            list-style: none;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            color: var(--color-text-1);
+            font-weight: 600;
+            transition: all .3s;
+            margin-right: 1px;
+
+            &-active {
+                background-color: var(--color-secondary-2);
+                color: var(--color-text-2);
+            }
+
+            &:hover {
+                background-color: var(--color-secondary-2);
+                color: var(--color-text-2);
+            }
+
+            &--menu {
+                display: none;
+            }
+
+            @include respond(phone) {
+                display: none;
+
+                &--menu {
+                    display: flex;
+                    margin-left: 3rem;
+                }
+            }
+        }
+
+        &__link {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                font-size: 1.6rem;
+                color: inherit;
+                text-transform: uppercase;
+
+                @include respond(phone) {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}

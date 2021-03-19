@@ -1,0 +1,13 @@
+@import 'helpers.scss';
+
+$dark-theme: create-theme(
+    #000,
+    #fff,
+    #1c1b1b,
+    #fff,
+    #fff,
+    rgb(137, 137, 137),
+    rgb(93, 180, 185),
+    #898989
+);
+

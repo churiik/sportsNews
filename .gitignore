@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# Computed directories
+css/
+
+# Files
+.idea
+.vscode
+.git
+package-lock.json

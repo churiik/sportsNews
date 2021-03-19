@@ -1,0 +1,195 @@
+.news {
+    margin: 0 0.5rem;
+    border-bottom: 3px solid var(--color-primary-1);
+
+    @include respond(phone) {
+        flex-direction: column;
+        margin: 0 4rem;
+    }
+
+    &-main,
+    &-sec {
+        border-left: var(--border-primary);
+        flex: 0 0 50%;
+        padding: 2rem;
+    }
+
+    &-sec {
+        border-right: var(--border-primary);
+
+        &__bottom {
+            @include respond(phone) {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.news-item {
+    padding: 1rem .3rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &__main {
+        position: relative;
+        cursor: pointer;
+        transition: all .2s;
+        margin-bottom: 3rem;
+
+        &__content {
+            width: 70%;
+            position: absolute;
+            right: 0;
+            bottom: 0.3rem;
+            background-color: rgba(0, 0, 0, .6);
+            color: #fff;
+            padding: 2rem;
+            
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+
+        &__overview {
+            font-size: 1rem;
+            margin-bottom: .5rem;
+
+            @include respond(phone) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__heading {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: .5rem;
+
+            @include respond(phone) {
+                font-size: 3.5rem;
+            }
+        }
+
+        &__text {
+            font-size: 1.15rem;
+            font-weight: 500;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__heading {
+        color: var(--color-text-2);
+        font-size: 2rem;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-bottom: 0.5rem;
+
+        @include respond(phone) {
+            font-size: 4rem;
+        }
+
+        &-small {
+            color: var(--color-text-2);
+            font-size: 1.7rem;
+
+            @include respond(phone) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--color-text-3);
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__img {
+        padding-bottom: 0.5rem;
+    }
+
+    &__date {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--color-text-4);
+        font-style: italic;
+        padding-bottom: 0.3rem;
+
+        @include respond(phone) {
+            font-size: 2.3rem;
+        }
+
+        &::before {
+            content: "—";
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 .5rem 1rem var(--shadow-color);
+    }
+}
+
+.column > .news-item,
+.video-group .news-item {
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--border-color-1);
+    }
+    
+    @include respond(phone) {
+        border-bottom: 3px solid var(--border-color-1);
+    }
+}
+
+.news-group {
+    border-top: 2px solid var(--border-color-1);
+    padding: 1rem 0;
+
+    @include respond(phone) {
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    &--latest {
+        @include respond(phone) {
+            flex-direction: row;
+        }   
+    }
+
+    &__main {
+        flex: 0 0 45%;
+        margin-right: 2rem;
+    }
+
+    &__sec {
+        flex: 0 0 55%;
+    }
+}
+
+.news-heading {
+    color: var(--color-text-4);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all .2s;
+
+    @include respond(phone) {
+        font-size: 3.5rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-0.2rem);
+        text-shadow: 1px 1px 4px var(--border-color-1);
+    }
+}

@@ -1,0 +1,28 @@
+@function create-theme(
+    $color-primary-1,
+    $color-secondary-1,
+    $color-secondary-2,
+    $color-text-1,
+    $color-text-2,
+    $color-text-3,
+    $color-text-4,
+    $border-color-1,
+) {
+    @return (
+        --color-primary-1: $color-primary-1,
+        --color-secondary-1: $color-secondary-1,
+        --color-secondary-2: $color-secondary-2,
+        --color-text-1: $color-text-1,
+        --color-text-2: $color-text-2,
+        --color-text-3: $color-text-3,
+        --color-text-4: $color-text-4,
+        --border-color-1: $border-color-1,
+        --shadow-color: rgba($color-secondary-1, .6)
+    )
+};
+
+@mixin theme($theme) {
+    @each $color in map-keys($theme) {
+        #{$color}: map-get($theme, $color);
+    }
+}

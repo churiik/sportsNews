@@ -1,0 +1,12 @@
+@import 'helpers.scss';
+
+$light-theme: create-theme(
+    rgb(9, 141, 148),
+    #000,
+    #fff,
+    #fff,
+    #000,
+    rgb(137, 137, 137),
+    rgb(93, 180, 185),
+    rgb(222, 222, 222)
+);

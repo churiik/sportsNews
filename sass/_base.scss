@@ -1,0 +1,39 @@
+@import 'themes/dark-theme.scss';
+@import 'themes/light-theme.scss';
+
+html {
+    box-sizing: border-box;
+    font-size: 78.125%;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+
+    --border-primary: 2px solid var(--border-color-1);
+    width: 100rem;
+    margin: 0 auto;
+    border-right: var(--border-primary);
+    border-left: var(--border-primary);
+    background-color: var(--color-secondary-2)
+}
+
+.light-theme {
+    @include theme($light-theme);
+}
+
+.dark-theme {
+    @include theme($dark-theme);
+}
+
+.bold {
+    font-weight: 700;
+}

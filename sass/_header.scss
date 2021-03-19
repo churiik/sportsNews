@@ -1,0 +1,48 @@
+.header {
+    justify-content: space-between;
+    padding: 1.5rem 0.4rem;
+    border-bottom: var(--border-primary);
+
+    @include respond(phone) {
+        align-items: center;
+        justify-content: baseline;
+        flex-direction: column;
+    }
+
+    &__content {
+        &-main {
+            font-family: 'Montserrat Alternates', sans-serif;
+            color: var(--color-text-2);
+            font-size: 4rem;
+            font-weight: 500;
+            letter-spacing: -0.6rem;
+
+            @include respond(phone) {
+                font-size: 8rem;
+            }
+        }
+
+        &-sub {
+            color: var(--color-text-3);
+            font-size: 1rem;
+            font-weight: 600;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__adv {
+        text-align: right;
+        width: 30%;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--color-text-3);
+
+        @include respond(phone) {
+            text-align: center;
+            margin-top: 2rem;
+        }
+    }
+}
